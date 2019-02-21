@@ -39,16 +39,16 @@ def reversed_polish_notation(expr):
                     oper2 = stack.pop()
                     oper1 = stack.pop()
                 except IndexError:
-                    raise FindError(u"Не хватает операндов")
+                    raise FindError(u"Не передано необходимое количество аргументов")
                 try:
                     oper = OPERATORS[oper](oper1, oper2)
                 except ZeroDivisionError:
-                    raise FindError(u"Нельзя делить на 0")
+                    raise FindError(u"Деление на 0")
 
                 stack.append(oper)
 
     if len(stack) != 1:
-        raise FindError(u"Избыток операндов")
+        raise FindError(u"Избыток аргументов")
 
     return stack.pop()
 
