@@ -49,7 +49,7 @@ def reversed_polish_notation(expr):
                 stack.append(oper)
 
     if len(stack) != 1:
-        raise RPNError(u"Избыток операндов")
+        raise FindError(u"Избыток операндов")
 
     return stack.pop()
 
