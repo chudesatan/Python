@@ -22,17 +22,6 @@ class FindError(Exception):
     def _get_message(self):
         return self._message
     message = property(_get_message)
- 
-
-class FailTest(unittest.TestCase):
-        
-    def runTest(self):
-        self.assertRaises(FindError, reversed_polish_notation, "+")
-        self.assertRaises(FindError, reversed_polish_notation, "2 +")
-        self.assertRaises(FindError, reversed_polish_notation, "2 2")
-        self.assertRaises(FindError, reversed_polish_notation, "+ 2 2")
-        self.assertRaises(FindError, reversed_polish_notation, "a 2 -")
-        self.assertRaises(FindError, reversed_polish_notation, "2 2 +-")
 
 def reversed_polish_notation(expr):
 
