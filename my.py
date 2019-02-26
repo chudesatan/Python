@@ -53,9 +53,10 @@ if __name__ == '__main__':
         animal.krik()
         allWeight += animal.getWeight()
         if animal.getWeight() > maxWeightAnimalCount:
-            maxWeightAnimalName = animal.getName()
-        
+          maxWeightAnimalName = animal.getName()
+          maxWeightAnimalCount = animal.getWeight()
+           
     print("Общий вес:")
     print(allWeight)
-    print("Самое тяжелое:")
-    print(allWeight)
+    print("Самое тяжелое животное:")
+    print(maxWeightAnimalName, maxWeightAnimalCount)
