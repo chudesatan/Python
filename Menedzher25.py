@@ -62,6 +62,9 @@ if __name__ == '__main__' :
     print(allWeight)
     print("Самое тяжелое животное:")
     print(maxWeightAnimalName, maxWeightAnimalCount)
+    
+    //Homework
+    
     print("время запуска","%s секунд" % time_start)
     print("время окончания работы","%s секунд" % (time.time()))
     print("затраченное время", round(time.time() - time_start, 5))
